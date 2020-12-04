@@ -10,112 +10,103 @@
     src: url(font/Raleway-Bold.ttf);
 }
 
+/*General*/
 
 *{
     margin:0;
     padding:0;
 }
 
-li{
-    list-style: none;
-}
+li{list-style: none;}
 
-body{
-    font-family: "Raleway",Arial, Helvetica, sans-serif ;
-}
+body{font-family: "Raleway",Arial, Helvetica, sans-serif ;}
 
 a {
     text-decoration: none;
     color: black;
 }
 
+section, footer{padding: 0px 5%;}
+
+section{
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+input:focus{outline:none;}
+
+button:focus{outline:none;}
+
+h1, h2, h3, h4, h5{font-family: 'Raleway bold';}
+
+#boutonrecherche2{display:none;}
+
 
 
 /*Header*/
 
 header{
-    height: 130px;
     display: flex;
-    flex-direction:column;
+    flex-direction:row;
+    flex-wrap: wrap;
     justify-content: space-between;
-}
-
-
-#ligne{
-    display: flex; 
     align-items: center;
-    justify-content: space-between; 
+}
+
+
+#logo{
     margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-#logo img{
-    width: 95px;
-}
+#logo img{width: 95px;}
 
-#ligne a{
+header p{
     text-decoration: none;
-    color: #0065fc;
     font-family: "Raleway bold";
+    margin-right: 5%;
 }
+
+a[title="s'inscrire"]{color: #0065fc;}
 
 
 
 /*Navigateur*/
-nav{
-    display: block;
+nav{width: 100%;}
 
-}
+nav ul{display: flex;}
 
-nav ul{
-    display: flex;
-}
-
-nav li{
-    width: 100%;
-}
+nav li{width: 100%;}
 
 nav a{
     display:block;
     text-align: center;
     border-bottom: 3px #F2F2F2 solid;
     padding-bottom: 15px;
-    text-decoration: none;
-    color:black;
-
 }
 
+nav a[href="#hebergements"]{
+    border-color: #0065fc;
+    color: #0065fc;
+}
 
-
-nav a:active{
-    border-bottom: 3px #0065fc solid;
+nav a[href="#activites"]:active{
+    border-color: #0065fc;
     color: #0065fc;
 }
 
 
-
-
 /*Section Recherche/filtres*/
 
-h1{
-    font-size: 1.5em;
-    font-family: "Raleway bold";
-    margin:0px 5% 0px 5%;
-}
+h1{font-size: 1.5em;}
 
 h1 + p{
-    margin: 15px 5% 35px 5%;
+    margin-top: 15px;
+    margin-bottom: 35px;
 }
 
-input:focus{
-    outline:none;/*ACCESSIBILITÉ ???*/
-}
 
-button:focus{
-    outline:none;/*ACCESSIBILITÉ ???*/
-}
 
         /*Champ de recherche*/
 
@@ -123,56 +114,53 @@ button:focus{
     display: flex; 
     align-items: stretch;
     width: min-content;
-    height:50px;
+    height: 50px;
     border: 1px #F2F2F2 solid;
-    margin: 0px 5% 0px 5%;
     border-radius: 17px;
 }
 
 #champrecherche input{
     display: block;
-    width: max-content;
+    width: 230px;
     border: none;
     padding-left:20px;
     font-size: 1.1em;
     font-weight: bold;
-    width: 235px;
+}
+
+#localisation, #boutonrecherche{
+    font-size: 1.2em;
+    width: 50px;
+    border: none;
 }
 
 #localisation{
-    width: 50px;
     border-radius: 17px 0px 0px 17px;
-    border: none;
     color: black;
     background-color: #F2F2F2;
-    font-size: 1.2em;
 }
 
 #boutonrecherche{
-    width: 50px;
-    border: none;
     color:white;
     background-color: #0065fc;
     border-radius: 17px;
-    font-size: 1.2em;
 }
-
 
 
         /*Filtres*/
 
 h2{
-    margin: 0px 5% 0px 5%;
-    padding-top:35px;
     font-size: 1.1em;
-    font-family: "Raleway bold";
+    margin-bottom: 15px;
+    flex: 1 0 100%;
 }
 
 #listefiltres{
     display: flex;
     align-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    margin: 20px 5% 0px 5%;
+    margin-top: 40px;
 }
 
 #listefiltres button{
@@ -184,7 +172,7 @@ h2{
     border-radius: 30px;
     background-color: white;
     border: 3px #F2F2F2 solid;
-    border-left:none;
+    border-left: none;
     margin-bottom: 15px;
     margin-right: 10px;
     padding-right:13px;
@@ -226,51 +214,71 @@ h2{
     border-radius: 50%;
     color: #0065fc;
     margin-right: 10px;
-    float:left;
-    clear: both;
 }
-
 
 #info{
-    margin: 15px 5% 0px 5%;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-start;  
 }
 
-#info p{
-    margin-top: 7px;
-}
-
+#info p{margin-top: 7px;}
 
 
 /*Sections*/
-section{
-    padding-bottom: 30px;
-    padding-top: 40px;
-}
 
 h3{
     font-size: 1.4em;
-    font-family: "Raleway bold";
-    margin: 0px 5% 25px 5%;
+    margin-bottom: 25px;
     align-self: flex-start;
 }
 
+.conteneur1, .conteneur2, .conteneur3{
+    width: 90%;
+    max-width: 375px;
+    margin: 15px auto;
+    box-shadow:0px 0px 10px #dfdfdf ;
+    border-radius: 20px;
+    background-color: white;
+}
 
-    /*Sections 2 : les plus populaires*/
-#populaires{
+h4 {font-size: 1.0em;}
+
+figcaption p{
+    font-size:0.8em;
+    margin-top:7px;
+}
+
+#activites, #populaires, #hebergements{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F2F2F2;
 }
+
+
+    /*Etoiles*/
+
+    .etoile{
+        display: flex;
+        margin-top: auto; 
+    }
+            
+    .conteneur1 .etoile{font-size: 10px;}
+              
+    .bleu{color:#0065fc;}
+                            
+    .gris{color:#cccccc;}
+
+
+    /*Sections 2 : les plus populaires*/
+
+#populaires{background-color: #F2F2F2;}
 
 #titreetlien{
     display: flex;
     justify-content: space-between;
-    width: 95%;
-    padding-right: 5%;
+    width: 100%;
 }
 
 #titreetlien i{
@@ -283,162 +291,478 @@ h3{
 .conteneur1{
     display: flex;
     flex-direction: row;
-    height: min-content;
-    width:335px;
-    background-color: white;
     padding: 5px;
     margin-bottom:10px;
-    border-radius: 20px;
-    box-shadow:0px 0px 10px #dfdfdf ;
+    height: 125px;
 }
 
 .conteneur1 img{
     width: 127px;
-    height: 135px;
+    height: 125px;
     border-radius: 16px 0px 0px 16px;
     object-fit: cover;
 }
 
 .conteneur1 figcaption{
-    margin: 10px 35px 10px 20px;
-}
-
-.conteneur1 p{
-    margin-bottom: 40px;
-}
-
-
-h4 {
-    font-weight: 900;
-    font-size: 1.0em;
-    font-family: "Raleway bold";
-}
-
-figcaption p{
-    font-size:0.8em;
-    margin-top:10px;
-}
-
-        /*Etoiles*/
-
-.etoile{
     display: flex;
+    flex-direction: column;
+    padding: 10px 35px 10px 20px;
 }
-        
-.conteneur1 .etoile{
-    font-size: 10px;
-}
-        
-        
-.bleu{
-    color:#0065fc;
-}
-                    
-.gris{
-    color:#cccccc;
-}
-        
 
 
     /*Section 3*/
 
-#hebergements{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 #affiPlus{
     align-self: flex-start;
-    margin: 35px 5% 0px 5%;
+    margin-top: auto;
     font-family: "Raleway bold";
+    margin-top:20px;
 }
+
 
         /*Conteneur 2*/
 
 .conteneur2{
     display: flex;
     flex-direction: column;
-    height: min-content;
-    width:330px;
-    height:200px;
+    height:190px;
     background-color: white;
     padding: 5px;
     margin-bottom:10px;
     border-radius: 20px;
-    box-shadow:0px 0px 10px #dfdfdf ;
+
 }
 
 .conteneur2 img{
-    width: 330px;
+    width: 100%;
     height: 115px;
     border-radius: 16px 16px 0px 0px;
     object-fit: cover;
 }
 
-.conteneur2 figcaption{
-    margin:10px 15px 10px 10px;
-}
+.conteneur2 figcaption{margin:10px 15px 10px 10px;}
+
 
         /*Etoiles*/
 
-.conteneur2 .etoile{
-    font-size: 12px;
-}
+.conteneur2 .etoile{font-size: 12px;}
 
-.conteneur2 p {
-    margin-bottom: 12px;
-}
+.conteneur2 p {margin-bottom: 7px;}
+
 
 /*Section 4*/
 
-#activites{
+#lienActivites{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+    width: 100%;
 }
 
-/*Conteneur 3*/
+    /*Conteneur 3*/
 
 .conteneur3{
     display: flex;
     flex-direction: column;
-    height: min-content;
-    width:330px;
     height:190px;
+}
+
+.texteActivite{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    padding: 18px 0px;
     background-color: white;
-    margin-bottom:10px;
-    border-radius: 20px;
-    box-shadow:0px 0px 10px #dfdfdf ;
+    border-radius: 0px 0px 20px 20px;
 }
 
-.conteneur3 img{
-    width: 330px;
-    height: 135px;
-    border-radius: 20px 20px 0px 0px;
-    object-fit: cover;
-}
+.texteActivite h4{
+    margin-left:15px;
 
-.conteneur3 figcaption{
-    margin:auto 15px auto 15px;
 }
 
 
+
+    /*Images*/
+#vieuxPort{
+    background: url('images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#fortPomegues{
+    background: url('images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#ilesFrioul{
+    background: url('images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#parcNational{
+    background: url('images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#notreDame{
+    background: url('images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#parcLongchamp{
+    background: url('images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
 
 
 /*Footer*/
 footer{
-    padding: 1px 5% 45px 5%;
+    padding-top: 10px;
+    padding-bottom:45px;
     background-color: #F2F2F2;
 }
 
 h5{
     font-size: 1em;
-    font-family: "Raleway bold";
-    margin: 45px 0px 20px 0px;
+    margin: 45px 0px 20px;
 }
 
 footer li{
     font-size:0.9em;
     margin-bottom:15px;
+}
+
+
+
+@media screen and (max-width: 300px){
+    h1{font-size:1.2em}
+
+    h1 + p{font-size: 0.8em}
+
+    h4{font-size: 0.8em}
+
+    figcaption p{font-size: 0.7em}
+
+    #champrecherche input{width: 130px}
+
+    .conteneur1 figcaption{padding-right:0px}
+
+    #listefiltres button{font-size: 0.9em;}
+}
+
+@media screen and (min-width:300px) and (max-width: 370px){
+    h1{font-size:1.3em}
+
+    h1 + p{font-size: 0.8em}
+
+    h4{font-size: 0.9em}
+
+    figcaption p{font-size: 0.8em}
+
+    #champrecherche input{width: 160px}
+
+    .conteneur1 figcaption{padding-right:0px}
+}
+
+
+
+
+/*Partie Tablette*/
+
+@media screen and (min-width: 768px) /*and (max-width: 1023px)*/{
+    header, section{
+        margin-left:30px;
+        margin-right:30px;
+        padding-left:0px;
+        padding-right: 0px;
+    }
+
+    
+/*Header*/
+    header{
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    nav{
+        align-self: flex-start;
+        width: min-content;
+        order: 2;
+        margin-left: auto;
+    }
+
+    nav a{
+        padding: 27px 30px 0px;
+        border-bottom: none;
+        border-top: 3px white solid;
+    }
+
+    #logo{
+        order:1;
+        padding-bottom: 0px;
+        margin-left: 0px;
+    }
+
+    header p{
+        order: 3;
+        margin-right: 0px;
+        margin-left: 30px;
+    }
+
+/*1ere Section*/
+
+    #info p{margin-left: 0px;}
+
+    #boutonrecherche{display: none;}
+
+    #boutonrecherche2{
+        width:130px;
+        display: block;
+        border: none;
+        color:white;
+        background-color: #0065fc;
+        border-radius: 0px 17px 17px 0px;
+        font-size: 1em;
+    }
+
+    #listefiltres button{margin-right: 20px;}
+
+/*2eme et 3eme Sections*/
+
+
+    #populaires, #hebergements{
+        padding: 45px 2% 20px;
+        background-color: #F2F2F2;
+        border-radius: 20px;
+    }
+
+    h3{margin:0px 0px 20px 0px;}
+
+    h4{font-size: 0.8em;}
+
+    figcaption p {font-size: 0.7em;}
+
+
+        /*2eme Section*/ 
+
+    #populaires{margin-bottom: 40px;}
+    .conteneur1 img{width:100px;}
+    .conteneur1 figcaption{padding-right:20px}
+
+
+    #lienPopulaires{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #lienPopulaires a{
+        width:100%;
+    }
+
+
+    /*3eme Section*/
+    
+    #lienHebergements{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        column-gap: 10px;
+        row-gap: 0px;
+    }
+
+
+    
+
+    /*4eme Section*/
+
+    #lienActivites{
+        width:100%;
+        height:445px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(10,1fr);
+        row-gap:30px;
+        column-gap: 10px
+    }
+
+    .conteneur3{height: 100%}
+
+    #vieuxPort{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 7;
+    }
+    
+    #fortPomegues{
+        grid-column-start: 1;
+        grid-row-start: 7;
+        grid-row-end: 11;
+    }
+    
+    #ilesFrioul{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    
+    #parcNational{
+        grid-column-start: 2;
+        grid-row-start: 5;
+        grid-row-end: 11;
+    }
+    
+    #notreDame{
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: 7;
+    }
+    
+    #parcLongchamp{
+        grid-column-start: 3;
+        grid-row-start: 7;
+        grid-row-end:11;
+    }
+
+    /*Footer*/
+    footer{
+        display: flex;
+        margin-top: 50px;
+    }
+
+    footer div{width: 33%;margin-right: 60px;}
+
+}
+
+
+@media screen and (min-width: 963px){
+    h2{
+        flex: none;
+        margin-right: 30px;
+    }
+}
+
+
+
+
+
+
+
+/*PARTIE ORDINATEUR*/
+
+@media screen and (min-width: 1025px){
+    header, section{
+        margin-left:3%;
+        margin-right:3%;
+    }
+
+    h4{font-size: 0.7em;}
+
+    figcaption p {font-size: 0.65em;}
+
+/*2eme et 3eme Sections*/
+    
+    #deuxSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    /*3eme Section*/
+    #hebergements{
+        order:1;
+        margin-right: 2%;
+        flex:1 1 70%;
+    }
+
+    #affiPlus{margin: 10px 0px;}
+    
+    /*2eme Section*/ 
+
+    #populaires{
+        order:2;
+        margin-bottom: 0px;
+        margin-left: 1%;
+        flex:10 1 25%;
+    }
+
+    #lienPopulaires{
+        flex-direction: column;
+        height:100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .conteneur1{
+        margin:0px auto;
+    }
+
+    .conteneur1 figcaption{
+        width:100%;
+        max-width: 265px;
+    }
+
+    
+    /*3eme Section*/
+    #lienActivites{
+        height:445px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(10,1fr);
+    }
+
+    #vieuxPort{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 11;
+    }
+    
+    #fortPomegues{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 7;
+    }
+    
+    #ilesFrioul{
+        grid-column-start: 2;
+        grid-row-start: 7;
+        grid-row-end: 11;
+    }
+    
+    #parcNational{
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: 11;
+    }
+    
+    #notreDame{
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 6;
+    }
+    
+    #parcLongchamp{
+        grid-column-start: 4;
+        grid-row-start: 6;
+        grid-row-end:11;
+    }
+}
+
+
+@media screen and (min-width: 1152px){
+    h4{font-size: 0.8em;}
+
+    figcaption p {font-size: 0.7em;}
 }
