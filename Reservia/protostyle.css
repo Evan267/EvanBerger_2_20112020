@@ -41,6 +41,15 @@ h1, h2, h3, h4, h5{font-family: 'Raleway bold';}
 
 #boutonrecherche2{display:none;}
 
+h1, h3, h2{font-size:1.2em}
+
+p{font-size: 0.8em;}
+
+h4{font-size: 0.8em}
+
+figcaption p{font-size:0.7em;}
+
+h5{font-size: 1em;}
 
 
 /*Header*/
@@ -60,12 +69,13 @@ header{
     padding-bottom: 30px;
 }
 
-#logo img{width: 95px;}
+#logo img{width: 88px;}
 
 header p{
     text-decoration: none;
     font-family: "Raleway bold";
     margin-right: 5%;
+    font-size:0.9em;
 }
 
 a[title="s'inscrire"]{color: #0065fc;}
@@ -84,6 +94,7 @@ nav a{
     text-align: center;
     border-bottom: 3px #F2F2F2 solid;
     padding-bottom: 15px;
+    font-size: 0.9em;
 }
 
 nav a[href="#hebergements"]{
@@ -99,60 +110,59 @@ nav a[href="#activites"]:active{
 
 /*Section Recherche/filtres*/
 
-h1{font-size: 1.5em;}
-
 h1 + p{
     margin-top: 15px;
     margin-bottom: 35px;
 }
 
-
-
-        /*Champ de recherche*/
+    /*Champ de recherche*/
 
 #champrecherche{
     display: flex; 
     align-items: stretch;
     width: min-content;
-    height: 50px;
+    height: 45px;
     border: 1px #F2F2F2 solid;
     border-radius: 17px;
+    width:97%;
 }
 
 #champrecherche input{
     display: block;
-    width: 230px;
+    max-width: 100%;
     border: none;
     padding-left:20px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: bold;
 }
 
 #localisation, #boutonrecherche{
-    font-size: 1.2em;
-    width: 50px;
+    font-size: 1.0em;
+    width: 45px;
+    height: 45px;
     border: none;
 }
 
 #localisation{
-    border-radius: 17px 0px 0px 17px;
+    border-radius: 13px 0px 0px 13px;
     color: black;
     background-color: #F2F2F2;
 }
 
 #boutonrecherche{
+    position: absolute;
+    right:5%;
     color:white;
     background-color: #0065fc;
-    border-radius: 17px;
+    border-radius: 13px;
 }
 
 
         /*Filtres*/
 
 h2{
-    font-size: 1.1em;
     margin-bottom: 15px;
-    flex: 1 0 100%;
+    width:100%;
 }
 
 #listefiltres{
@@ -166,28 +176,28 @@ h2{
 #listefiltres button{
     display: flex;
     align-items: center;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: bold;
-    height: 50px;
+    height: 45px;
     border-radius: 30px;
     background-color: white;
-    border: 3px #F2F2F2 solid;
+    border: 2px #F2F2F2 solid;
     border-left: none;
     margin-bottom: 15px;
-    margin-right: 10px;
-    padding-right:13px;
+    margin-right: auto;
+    padding-right:15px;
 }
 
 #listefiltres i {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    height: 45px;
+    width: 45px;
     border-radius: 30px;
     background-color: #deebff;
     color: #0065fc;
-    margin-right: 10px;
+    margin-right: 12px;
     font-size: 1.2em;
 }
 
@@ -206,11 +216,11 @@ h2{
 
 .fa-info{
     text-align: center;
-    font-size: 14px;
-    padding-top: 5px;
-    width: 25px;
-    height: 20px;
-    border: 2px #F2F2F2 solid;
+    font-size: 0.7em;
+    padding-top: 4px;
+    width: 20px;
+    height: 16px;
+    border: 1px #F2F2F2 solid;
     border-radius: 50%;
     color: #0065fc;
     margin-right: 10px;
@@ -223,32 +233,26 @@ h2{
     align-items: flex-start;  
 }
 
-#info p{margin-top: 7px;}
+#info p{margin-top: 5px;}
 
 
 /*Sections*/
 
 h3{
-    font-size: 1.4em;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     align-self: flex-start;
 }
 
 .conteneur1, .conteneur2, .conteneur3{
-    width: 90%;
-    max-width: 375px;
-    margin: 15px auto;
+    width: 97%;
+    margin: 10px 0px;
     box-shadow:0px 0px 10px #dfdfdf ;
     border-radius: 20px;
     background-color: white;
 }
 
-h4 {font-size: 1.0em;}
+figcaption p{margin-top:6px;}
 
-figcaption p{
-    font-size:0.8em;
-    margin-top:7px;
-}
 
 #activites, #populaires, #hebergements{
     display: flex;
@@ -261,11 +265,10 @@ figcaption p{
 
     .etoile{
         display: flex;
-        margin-top: auto; 
+        margin-top: auto;
+        font-size: 0.6em;
     }
-            
-    .conteneur1 .etoile{font-size: 10px;}
-              
+
     .bleu{color:#0065fc;}
                             
     .gris{color:#cccccc;}
@@ -282,7 +285,7 @@ figcaption p{
 }
 
 #titreetlien i{
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: black;
 }
 
@@ -292,13 +295,12 @@ figcaption p{
     display: flex;
     flex-direction: row;
     padding: 5px;
-    margin-bottom:10px;
-    height: 125px;
+    height: 110px;
 }
 
 .conteneur1 img{
-    width: 127px;
-    height: 125px;
+    width: 40%;
+    height: 100%;
     border-radius: 16px 0px 0px 16px;
     object-fit: cover;
 }
@@ -306,7 +308,7 @@ figcaption p{
 .conteneur1 figcaption{
     display: flex;
     flex-direction: column;
-    padding: 10px 35px 10px 20px;
+    padding: 10px 15px;
 }
 
 
@@ -317,7 +319,8 @@ figcaption p{
     align-self: flex-start;
     margin-top: auto;
     font-family: "Raleway bold";
-    margin-top:20px;
+    margin-top: 20px;
+    font-size: 0.9em;
 }
 
 
@@ -326,7 +329,7 @@ figcaption p{
 .conteneur2{
     display: flex;
     flex-direction: column;
-    height:190px;
+    height:155px;
     background-color: white;
     padding: 5px;
     margin-bottom:10px;
@@ -336,19 +339,15 @@ figcaption p{
 
 .conteneur2 img{
     width: 100%;
-    height: 115px;
+    height: 60%;
     border-radius: 16px 16px 0px 0px;
     object-fit: cover;
 }
 
-.conteneur2 figcaption{margin:10px 15px 10px 10px;}
+.conteneur2 figcaption{margin:8px 10px;}
 
+.conteneur2 p {margin-bottom: 9px;}
 
-        /*Etoiles*/
-
-.conteneur2 .etoile{font-size: 12px;}
-
-.conteneur2 p {margin-bottom: 7px;}
 
 
 /*Section 4*/
@@ -365,26 +364,23 @@ figcaption p{
 .conteneur3{
     display: flex;
     flex-direction: column;
-    height:190px;
+    height:150px;
+    width: 100%;
 }
+
 
 .texteActivite{
     position: absolute;
     bottom:0;
     width: 100%;
-    padding: 18px 0px;
+    padding: 15px 0px;
     background-color: white;
     border-radius: 0px 0px 20px 20px;
 }
 
-.texteActivite h4{
-    margin-left:15px;
+.texteActivite h4{margin-left:15px;}
 
-}
-
-
-
-    /*Images*/
+        /*Images*/
 #vieuxPort{
     background: url('images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg') no-repeat;
     background-size: cover;
@@ -436,7 +432,6 @@ footer{
 }
 
 h5{
-    font-size: 1em;
     margin: 45px 0px 20px;
 }
 
@@ -463,19 +458,125 @@ footer li{
     #listefiltres button{font-size: 0.9em;}
 }
 
-@media screen and (min-width:300px) and (max-width: 370px){
-    h1{font-size:1.3em}
+@media screen and (min-width: 370px){
 
-    h1 + p{font-size: 0.8em}
+    #logo img{width:100px;}
 
-    h4{font-size: 0.9em}
+    header p, nav a{font-size: 1.0em;}
 
-    figcaption p{font-size: 0.8em}
+    h1, h3{font-size:1.4em}
+    h2{font-size:1.2em}
 
-    #champrecherche input{width: 160px}
+    p{font-size: 1.0em;}
 
-    .conteneur1 figcaption{padding-right:0px}
+    h4{font-size: 1em}
+
+    figcaption p{font-size:0.9em;}
+
+    h5{font-size: 1.1em;}
+
+    #titreetlien i{font-size:1.5em}
+
+    .etoile{font-size: 0.7em;}
+
+    #affiPlus{font-size: 1.2em;}
+
+    #localisation, #boutonrecherche{
+        font-size: 1.2em;
+        width: 50px;
+    }
+
+    #champrecherche input{
+        font-size: 1.1em;
+    }
+
+    #champrecherche, #localisation, #boutonrecherche{
+        height: 50px;
+    }
+
+    #listefiltres button{
+        font-size: 1em;
+        height: 50px;
+    }
+    
+    #listefiltres i {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    .fa-info{
+        font-size: 0.9em;
+        padding-top: 5px;
+        width: 25px;
+        height: 20px;
+    }
+   
+    .conteneur1{height:145px;}
+    .conteneur2{height:200px;}
+    .conteneur3{height:190px;}
+    
+    .texteActivite{padding:20px 0px;}
 }
+
+
+@media screen and (min-width: 420px){
+
+    #logo img{width:110px;}
+
+    header p, nav a{font-size: 1.1em;}
+
+    h1, h3{font-size:1.6em}
+
+    h2{font-size:1.4em}
+
+    p{font-size: 1.1em;}
+
+    h4{font-size: 1.1em}
+
+    figcaption p{font-size:1em;}
+
+    #champrecherche, #localisation, #boutonrecherche{height: 55px;}
+
+    #localisation, #boutonrecherche{
+        font-size: 1.3em;
+        width: 55px;
+    }
+
+    #champrecherche input{font-size: 1.2em;}
+
+    #listefiltres button{
+        font-size: 1.1em;
+        height: 55px;
+    }
+    
+    #listefiltres i {
+        width: 55px;
+        height: 55px;
+    }
+
+    .fa-info{
+        font-size: 1em;
+        padding-top: 6px;
+        width: 30px;
+        height: 24px;
+    }
+   
+    .conteneur1{height:155px;}
+    .conteneur2{height:220px;}
+    .conteneur3{height:205px;}
+
+    #titreetlien i{font-size:1.7em}
+
+    .etoile{font-size: 0.8em;}
+
+    #affiPlus{font-size: 1.3em;}
+}
+
+
+
+
+
 
 
 
