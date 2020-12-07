@@ -520,7 +520,7 @@ footer li{
 }
 
 
-@media screen and (min-width: 420px){
+@media screen and (min-width: 420px) and (max-width:767px){
 
     #logo img{width:110px;}
 
@@ -565,6 +565,8 @@ footer li{
     .conteneur1{height:155px;}
     .conteneur2{height:220px;}
     .conteneur3{height:205px;}
+
+    .conteneur1 figcaption{padding:15px 20px;}
 
     #titreetlien i{font-size:1.7em}
 
@@ -627,6 +629,10 @@ footer li{
 
     #info p{margin-left: 0px;}
 
+    #champrecherche{
+        width: min-content;
+    }
+
     #boutonrecherche{display: none;}
 
     #boutonrecherche2{
@@ -645,7 +651,7 @@ footer li{
 
 
     #populaires, #hebergements{
-        padding: 45px 2% 20px;
+        padding: 45px 5% 20px;
         background-color: #F2F2F2;
         border-radius: 20px;
     }
@@ -671,6 +677,7 @@ footer li{
 
     #lienPopulaires a{
         width:100%;
+        margin-right: 10px;
     }
 
 
@@ -684,8 +691,6 @@ footer li{
         row-gap: 0px;
     }
 
-
-    
 
     /*4eme Section*/
 
@@ -763,7 +768,7 @@ footer li{
 
 /*PARTIE ORDINATEUR*/
 
-@media screen and (min-width: 1025px){
+@media screen and (min-width: 1024px){
     header, section{
         margin-left:3%;
         margin-right:3%;
@@ -773,12 +778,18 @@ footer li{
 
     figcaption p {font-size: 0.65em;}
 
+    h2{width:min-content;}
+
 /*2eme et 3eme Sections*/
     
     #deuxSection{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    #populaires, #hebergements{
+        padding: 45px 2% 20px;
     }
 
 
