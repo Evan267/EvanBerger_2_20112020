@@ -123,7 +123,7 @@ h1 + p{
     width: min-content;
     height: 45px;
     border: 1px #F2F2F2 solid;
-    border-radius: 17px;
+    border-radius: 13px;
     width:97%;
 }
 
@@ -458,7 +458,7 @@ footer li{
     #listefiltres button{font-size: 0.9em;}
 }
 
-@media screen and (min-width: 370px){
+@media screen and (min-width: 370px) and (max-width:1024px){
 
     #logo img{width:100px;}
 
@@ -666,7 +666,6 @@ footer li{
         /*2eme Section*/ 
 
     #populaires{margin-bottom: 40px;}
-    .conteneur1 img{width:100px;}
     .conteneur1 figcaption{padding-right:20px}
 
 
@@ -696,15 +695,15 @@ footer li{
 
     #lienActivites{
         width:100%;
-        height:445px;
+        height:470px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(10,1fr);
         row-gap:30px;
-        column-gap: 10px
+        column-gap: 20px
     }
 
-    .conteneur3{height: 100%}
+    .conteneur3{height: 100%;margin:0px;}
 
     #vieuxPort{
         grid-column-start: 1;
@@ -745,7 +744,7 @@ footer li{
     /*Footer*/
     footer{
         display: flex;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     footer div{width: 33%;margin-right: 60px;}
@@ -769,16 +768,61 @@ footer li{
 /*PARTIE ORDINATEUR*/
 
 @media screen and (min-width: 1024px){
+
+    header p, nav a{font-size: 0.7em;}
+
+    h1, h3{font-size:1.1em}
+    h2{font-size:0.9em}
+
+    p{font-size: 0.8em;}
+
+    h4{font-size: 0.6em}
+
+    figcaption p{font-size:0.5em;}
+
+
+    #titreetlien i{font-size:1.2em}
+
+    .etoile{font-size: 0.5em;}
+
+    #affiPlus{font-size: 0.9em;}
+
     header, section{
         margin-left:3%;
         margin-right:3%;
     }
 
-    h4{font-size: 0.7em;}
-
-    figcaption p {font-size: 0.65em;}
-
     h2{width:min-content;}
+
+
+/*Header*/
+
+    #logo img{width: 80px}
+
+    nav a{padding: 27px auto 0px;}
+
+
+/*1ere Section*/
+
+    #champrecherche, #localisation, #boutonrecherche{height: 45px;}
+
+    #localisation, #boutonrecherche{
+        font-size: 1em;
+        width: 45px;
+    }
+
+    #champrecherche input{font-size: 0.9em;}
+
+    #listefiltres button{
+        font-size: 0.8em;
+        height: 40px;
+    }
+    
+    #listefiltres i {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
 
 /*2eme et 3eme Sections*/
     
@@ -788,19 +832,21 @@ footer li{
         justify-content: space-between;
     }
 
-    #populaires, #hebergements{
-        padding: 45px 2% 20px;
-    }
+    #populaires, #hebergements{padding: 45px 2% 20px;}
 
 
     /*3eme Section*/
     #hebergements{
         order:1;
         margin-right: 2%;
-        flex:1 1 70%;
+        flex:1 1 60%;
     }
 
+    #lienHebergements{column-gap: 20px;}
+
     #affiPlus{margin: 10px 0px;}
+
+    .conteneur2{height:150px;}
     
     /*2eme Section*/ 
 
@@ -808,7 +854,7 @@ footer li{
         order:2;
         margin-bottom: 0px;
         margin-left: 1%;
-        flex:10 1 25%;
+        flex:1 1 26%;
     }
 
     #lienPopulaires{
@@ -820,61 +866,99 @@ footer li{
 
     .conteneur1{
         margin:0px auto;
+        height:100px;
     }
-
     .conteneur1 figcaption{
         width:100%;
         max-width: 265px;
+        padding-right: 15px
     }
 
     
     /*3eme Section*/
     #lienActivites{
-        height:445px;
+        height: 340px;
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(10,1fr);
+        grid-template-rows: repeat(20,1fr);
+        row-gap: 0px;
+        column-gap: 30px;
     }
+
+    .texteActivite{padding:15px 0px;}
 
     #vieuxPort{
         grid-column-start: 1;
         grid-row-start: 1;
-        grid-row-end: 11;
+        grid-row-end: 20;
     }
     
     #fortPomegues{
         grid-column-start: 2;
         grid-row-start: 1;
-        grid-row-end: 7;
+        grid-row-end: 11;
     }
     
     #ilesFrioul{
         grid-column-start: 2;
-        grid-row-start: 7;
-        grid-row-end: 11;
+        grid-row-start: 13;
+        grid-row-end: 20;
     }
     
     #parcNational{
         grid-column-start: 3;
         grid-row-start: 1;
-        grid-row-end: 11;
+        grid-row-end: 20;
     }
     
     #notreDame{
         grid-column-start: 4;
         grid-row-start: 1;
-        grid-row-end: 6;
+        grid-row-end: 9;
     }
     
     #parcLongchamp{
         grid-column-start: 4;
-        grid-row-start: 6;
-        grid-row-end:11;
+        grid-row-start: 11;
+        grid-row-end:20;
     }
 }
 
 
 @media screen and (min-width: 1152px){
-    h4{font-size: 0.8em;}
+    #logo img{width:100px;}
 
-    figcaption p {font-size: 0.7em;}
+    header p, nav a{font-size: 1em;}
+
+    h1, h3{font-size:1.4em}
+    h2{font-size:1.1em}
+
+    p{font-size: 1em;}
+
+    h4{font-size: 0.8em}
+
+    figcaption p{font-size:0.7em;}
+
+
+    #titreetlien i{font-size:1.4em}
+
+    .etoile{font-size: 0.7em;}
+
+    #affiPlus{font-size: 1.1em;}
+
+    #populaires, #hebergements{padding: 45px 3% 20px;}
+
+    .conteneur1{height:135px;}
+    .conteneur2{height:190px;}
+
+    #lienHebergements{
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+
+    #lienActivites{
+        height: 445px;
+        column-gap: 40px;
+    }
+
+    .texteActivite{padding:20px 0px;}
 }
