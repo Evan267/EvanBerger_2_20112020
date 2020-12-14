@@ -645,20 +645,20 @@ footer li{
 
 
     #populaires, #hebergements{
-        padding: 45px 3% 20px;
+        padding: 45px 5% 20px;
         background-color: #F2F2F2;
         border-radius: 20px;
     }
 
     h3{margin:0px 0px 20px 0px;}
 
-    h4{font-size: 0.7em;}
+    h4{font-size: 0.8em;}
 
-    figcaption p {font-size: 0.6em;}
+    figcaption p {font-size: 0.7em;}
 
 
         /*2eme Section*/ 
-    .conteneur1{height:130px}
+
     #populaires{margin-bottom: 40px;}
     .conteneur1 figcaption{padding-right:20px}
 
@@ -683,8 +683,6 @@ footer li{
         column-gap: 10px;
         row-gap: 0px;
     }
-
-    .conteneur2{height:160px}
 
 
     /*4eme Section*/
@@ -769,9 +767,9 @@ footer li{
 
     p{font-size: 0.8em;}
 
-    h4{font-size: 0.7em}
+    h4{font-size: 0.6em}
 
-    figcaption p{font-size:0.6em;}
+    figcaption p{font-size:0.5em;}
 
 
     #titreetlien i{font-size:1.2em}
@@ -920,45 +918,6 @@ footer li{
 
     /*Footer*/
     footer{padding-left: 3%;}
-}
-
-@media screen and (min-width: 1200px){
-    #logo img{width:90px;}
-
-    header p, nav a{font-size: 0.9em;}
-
-    h1, h3{font-size:1.2em}
-    h2{font-size:1.1em}
-
-    p{font-size: 0.9em;}
-
-    h4{font-size: 0.9em}
-
-    figcaption p{font-size:0.8em;}
-
-
-    #titreetlien i{font-size:1.2em}
-
-    .etoile{font-size: 0.6em;}
-
-    #affiPlus{font-size: 0.9em;}
-
-    /*Header*/
-
-    nav li{width: 145px}
-
-
-    /*2eme et 3eme Section*/
-
-    .conteneur1{height:123px;}
-    .conteneur2{height:175px;}
-
-
-    /*4eme Section*/
-
-    #lienActivites{
-        height: 400px;
-    }
 }
 
 
