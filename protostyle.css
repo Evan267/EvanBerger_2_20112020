@@ -1,0 +1,1358 @@
+/*Police*/
+
+@font-face{
+    font-family: 'Raleway';
+    src: url(font/Raleway.ttf);
+}
+
+@font-face{
+    font-family: 'Raleway bold';
+    src: url(font/Raleway-Bold.ttf);
+}
+
+/*General*/
+
+*{
+    margin:0;
+    padding:0;
+}
+
+li{list-style: none;}
+
+body{font-family: "Raleway",Arial, Helvetica, sans-serif ;}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+section, footer{padding: 0px 5%;}
+
+section{
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+input:focus{outline:none;}
+
+button:focus{outline:none;}
+
+h1, h2, h3, h4, h5{font-family: 'Raleway bold';}
+
+#boutonrecherche2{display:none;}
+
+h1, h3, h2{font-size:1.2em}
+
+p{font-size: 0.8em;}
+
+h4{font-size: 0.8em}
+
+figcaption p{font-size:0.7em;}
+
+h5{font-size: 1em;}
+
+
+/*Header*/
+
+header{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#logo{
+    margin-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#logo img{width: 88px;}
+
+header p{
+    text-decoration: none;
+    font-family: "Raleway bold";
+    margin-right: 5%;
+    font-size:0.9em;
+}
+
+a[title="s'inscrire"]{color: #0065fc;}
+
+
+
+/*Navigateur*/
+nav{width: 100%;}
+
+nav ul{display: flex;}
+
+nav li{width: 100%;}
+
+nav a{
+    display:block;
+    text-align: center;
+    border-bottom: 3px #F2F2F2 solid;
+    padding-bottom: 15px;
+    font-size: 0.9em;
+}
+
+nav a[href="#hebergements"]{
+    border-color: #0065fc;
+    color: #0065fc;
+}
+
+nav a[href="#activites"]:active{
+    border-color: #0065fc;
+    color: #0065fc;
+}
+
+
+/*Section Recherche/filtres*/
+
+h1 + p{
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+    /*Champ de recherche*/
+
+#champrecherche{
+    display: flex; 
+    align-items: stretch;
+    width: min-content;
+    height: 45px;
+    border: 1px #F2F2F2 solid;
+    border-radius: 13px;
+    width:97%;
+}
+
+#champrecherche input{
+    display: block;
+    max-width: 100%;
+    border: none;
+    padding-left:20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#localisation, #boutonrecherche{
+    font-size: 1.0em;
+    width: 45px;
+    height: 45px;
+    border: none;
+}
+
+#localisation{
+    border-radius: 13px 0px 0px 13px;
+    color: black;
+    background-color: #F2F2F2;
+}
+
+#boutonrecherche{
+    position: absolute;
+    right:5%;
+    color:white;
+    background-color: #0065fc;
+    border-radius: 13px;
+}
+
+
+        /*Filtres*/
+
+h2{
+    margin-bottom: 15px;
+    width:100%;
+}
+
+#listefiltres{
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#listefiltres button{
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    height: 45px;
+    border-radius: 30px;
+    background-color: white;
+    border: 2px #F2F2F2 solid;
+    border-left: none;
+    margin-bottom: 15px;
+    margin-right: auto;
+    padding-right:15px;
+}
+
+#listefiltres i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: #deebff;
+    color: #0065fc;
+    margin-right: 12px;
+    font-size: 1.2em;
+}
+
+#listefiltres button:hover{
+    background-color: #deebff;
+    border-color: #deebff;
+}
+
+#listefiltres button:focus{
+    background-color: #0065fc;
+    border-color: #0065fc;
+    color: white;
+}
+
+    /*Info*/
+
+.fa-info{
+    text-align: center;
+    font-size: 0.7em;
+    padding-top: 4px;
+    width: 20px;
+    height: 16px;
+    border: 1px #F2F2F2 solid;
+    border-radius: 50%;
+    color: #0065fc;
+    margin-right: 10px;
+}
+
+#info{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;  
+}
+
+#info p{margin-top: 4px;}
+
+
+/*Sections 2,3 et 4*/
+
+h3{
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.conteneur1, .conteneur2, .conteneur3{
+    width: 97%;
+    margin: 10px 0px;
+    box-shadow:0px 0px 10px #dfdfdf ;
+    border-radius: 20px;
+    background-color: white;
+}
+
+figcaption p{margin-top:6px;}
+
+
+#activites, #populaires, #hebergements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+    /*Etoiles*/
+
+    .etoile{
+        display: flex;
+        margin-top: auto;
+        font-size: 0.6em;
+    }
+
+    .bleu{color:#0065fc;}
+                            
+    .gris{color:#cccccc;}
+
+
+    /*Sections 2 : les plus populaires*/
+
+#populaires{background-color: #F2F2F2;}
+
+#titreetlien{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#titreetlien i{
+    font-size: 1.3em;
+    color: black;
+}
+
+        /*Conteneur 1*/
+
+.conteneur1{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    height: 110px;
+}
+
+.conteneur1 img{
+    width: 40%;
+    height: 100%;
+    border-radius: 16px 0px 0px 16px;
+    object-fit: cover;
+}
+
+.conteneur1 figcaption{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+
+
+    /*Section 3*/
+#affiPlus{
+    align-self: flex-start;
+    margin-top: auto;
+    font-family: "Raleway bold";
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+
+        /*Conteneur 2*/
+
+.conteneur2{
+    display: flex;
+    flex-direction: column;
+    height:155px;
+    background-color: white;
+    padding: 5px;
+    margin-bottom:10px;
+    border-radius: 20px;
+
+}
+
+.conteneur2 img{
+    width: 100%;
+    height: 60%;
+    border-radius: 16px 16px 0px 0px;
+    object-fit: cover;
+}
+
+.conteneur2 figcaption{margin:8px 10px;}
+
+.conteneur2 p {margin-bottom: 9px;}
+
+
+
+/*Section 4*/
+
+#lienActivites{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 100%;
+}
+
+    /*Conteneur 3*/
+
+.conteneur3{
+    display: flex;
+    flex-direction: column;
+    height:150px;
+    width: 100%;
+}
+
+
+.texteActivite{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    padding: 15px 0px;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.texteActivite h4{margin-left:15px;}
+
+        /*Images*/
+#vieuxPort{
+    background: url('images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#fortPomegues{
+    background: url('images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#ilesFrioul{
+    background: url('images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#parcNational{
+    background: url('images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#notreDame{
+    background: url('images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+#parcLongchamp{
+    background: url('images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+
+/*Footer*/
+footer{
+    padding-top: 10px;
+    padding-bottom:45px;
+    background-color: #F2F2F2;
+}
+
+h5{
+    margin: 45px 0px 20px;
+}
+
+footer li{
+    font-size:0.9em;
+    margin-bottom:15px;
+}
+
+
+@media screen and (max-width: 300px){
+    h1{font-size:1.2em}
+
+    h1 + p{font-size: 0.8em}
+
+    h4{font-size: 0.8em}
+
+    figcaption p{font-size: 0.7em}
+
+    #champrecherche input{width: 130px}
+
+    .conteneur1 figcaption{padding-right:0px}
+
+    #listefiltres button{font-size: 0.9em;}
+}
+
+@media screen and (min-width: 370px) and (max-width:1024px){
+
+    #logo img{width:100px;}
+
+    header p, nav a{font-size: 1.0em;}
+
+    h1, h3{font-size:1.4em}
+    h2{font-size:1.2em}
+
+    p{font-size: 1.0em;}
+
+    h4{font-size: 1em}
+
+    figcaption p{font-size:0.9em;}
+
+    h5{font-size: 1.1em;}
+
+    #titreetlien i{font-size:1.5em}
+
+    .etoile{font-size: 0.7em;}
+
+    #affiPlus{font-size: 1.2em;}
+
+    #localisation, #boutonrecherche{
+        font-size: 1.2em;
+        width: 50px;
+    }
+
+    #champrecherche input{
+        font-size: 1.1em;
+    }
+
+    #champrecherche, #localisation, #boutonrecherche{
+        height: 50px;
+    }
+
+    #listefiltres button{
+        font-size: 1em;
+        height: 50px;
+    }
+    
+    #listefiltres i {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    .fa-info{
+        font-size: 0.9em;
+        padding-top: 5px;
+        width: 25px;
+        height: 20px;
+    }
+   
+    .conteneur1{height:145px;}
+    .conteneur2{height:200px;}
+    .conteneur3{height:190px;}
+    
+    .texteActivite{padding:20px 0px;}
+}
+
+@media screen and (min-width: 420px) and (max-width:767px){
+
+    #logo img{width:110px;}
+
+    header p, nav a{font-size: 1.1em;}
+
+    h1, h3{font-size:1.6em}
+
+    h2{font-size:1.4em}
+
+    p{font-size: 1.1em;}
+
+    h4{font-size: 1.1em}
+
+    figcaption p{font-size:1em;}
+
+    #champrecherche, #localisation, #boutonrecherche{height: 55px;}
+
+    #localisation, #boutonrecherche{
+        font-size: 1.3em;
+        width: 55px;
+    }
+
+    #champrecherche input{font-size: 1.2em;}
+
+    #listefiltres button{
+        font-size: 1.1em;
+        height: 55px;
+    }
+    
+    #listefiltres i {
+        width: 55px;
+        height: 55px;
+    }
+
+    .fa-info{
+        font-size: 1em;
+        padding-top: 6px;
+        width: 30px;
+        height: 24px;
+    }
+   
+    .conteneur1{height:155px;}
+    .conteneur2{height:220px;}
+    .conteneur3{height:205px;}
+
+    .conteneur1 figcaption{padding:15px 20px;}
+
+    #titreetlien i{font-size:1.7em}
+
+    .etoile{font-size: 0.8em;}
+
+    #affiPlus{font-size: 1.3em;}
+}
+
+
+
+/*Partie Tablette*/
+
+@media screen and (min-width: 768px) {
+    header, section{
+        margin-left:30px;
+        margin-right:30px;
+        padding-left:0px;
+        padding-right: 0px;
+    }
+
+    
+/*Header*/
+    header{
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    nav{
+        align-self: flex-start;
+        width: min-content;
+        order: 2;
+        margin-left: auto;
+    }
+
+    nav li{width: 130px}
+
+    nav a{
+        padding: 27px 0px;
+        border-bottom: none;
+        border-top: 3px white solid;
+    }
+
+    #logo{
+        order:1;
+        padding-bottom: 0px;
+        margin-left: 0px;
+    }
+
+    header p{
+        order: 3;
+        margin-right: 0px;
+        margin-left: 30px;
+    }
+
+/*1ere Section*/
+
+    #info p{margin-left: 0px;}
+
+    #champrecherche{
+        width: min-content;
+        border-radius:19px;
+        border-right: none;
+    }
+
+    #boutonrecherche{display: none;}
+
+    #boutonrecherche2{
+        width:130px;
+        display: block;
+        border: none;
+        color:white;
+        background-color: #0065fc;
+        border-radius: 0px 17px 17px 0px;
+        font-size: 1em;
+    }
+
+    #listefiltres button{margin-right: 20px;}
+
+/*2eme et 3eme Sections*/
+
+
+    #populaires, #hebergements{
+        padding: 45px 3% 20px;
+        background-color: #F2F2F2;
+        border-radius: 20px;
+    }
+
+    h3{margin:0px 0px 20px 0px;}
+
+    h4{font-size: 0.7em;}
+
+    figcaption p {font-size: 0.6em;}
+
+
+        /*2eme Section*/ 
+    .conteneur1{height:130px}
+    #populaires{margin-bottom: 40px;}
+    .conteneur1 figcaption{padding-right:20px}
+
+
+    #lienPopulaires{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #lienPopulaires a{
+        width:100%;
+        margin-right: 10px;
+    }
+
+
+    /*3eme Section*/
+    
+    #lienHebergements{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        column-gap: 10px;
+        row-gap: 0px;
+    }
+
+    .conteneur2{height:160px}
+
+
+    /*4eme Section*/
+
+    #lienActivites{
+        width:100%;
+        height:470px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(10,1fr);
+        row-gap:30px;
+        column-gap: 20px
+    }
+
+    .conteneur3{height: 100%;margin:0px;}
+
+    #vieuxPort{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 7;
+    }
+    
+    #fortPomegues{
+        grid-column-start: 1;
+        grid-row-start: 7;
+        grid-row-end: 11;
+    }
+    
+    #ilesFrioul{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    
+    #parcNational{
+        grid-column-start: 2;
+        grid-row-start: 5;
+        grid-row-end: 11;
+    }
+    
+    #notreDame{
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: 7;
+    }
+    
+    #parcLongchamp{
+        grid-column-start: 3;
+        grid-row-start: 7;
+        grid-row-end:11;
+    }
+
+    /*Footer*/
+    footer{
+        display: flex;
+        margin-top: 20px;
+    }
+
+    footer div{width: 33%;margin-right: 60px;}
+    
+
+}
+
+
+@media screen and (min-width: 963px){
+    h2{
+        flex: none;
+        margin-right: 30px;
+    }
+}
+
+
+
+/*PARTIE ORDINATEUR*/
+
+@media screen and (min-width: 1024px){
+
+    header p, nav a{font-size: 0.7em;}
+
+    h1, h3{font-size:1.1em}
+    h2{font-size:0.9em}
+
+    p{font-size: 0.8em;}
+
+    h4{font-size: 0.7em}
+
+    figcaption p{font-size:0.6em;}
+
+
+    #titreetlien i{font-size:1.2em}
+
+    .etoile{font-size: 0.5em;}
+
+    #affiPlus{font-size: 0.9em;}
+
+    header, section{
+        margin-left:3%;
+        margin-right:3%;
+    }
+
+
+    h2{width:min-content;}
+
+
+/*Header*/
+
+    #logo img{width: 80px}
+
+    nav a{padding: 27px auto 0px;}
+
+    nav li{width: 120px}
+
+
+/*1ere Section*/
+
+    #champrecherche, #localisation{height: 45px;}
+
+    #localisation{
+        font-size: 1em;
+        width: 45px;
+    }
+
+    #champrecherche input{font-size: 0.9em;}
+
+    #listefiltres button{
+        font-size: 0.8em;
+        height: 40px;
+    }
+    
+    #listefiltres i {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+/*2eme et 3eme Sections*/
+    
+    #deuxSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #populaires, #hebergements{padding: 45px 2% 20px;}
+
+
+    /*3eme Section*/
+    #hebergements{
+        order:1;
+        margin-right: 2%;
+        flex:1 1 60%;
+    }
+
+    #lienHebergements{column-gap: 20px;}
+
+    #affiPlus{margin: 10px 0px;}
+
+    .conteneur2{height:150px;}
+    
+    /*2eme Section*/ 
+
+    #populaires{
+        order:2;
+        margin-bottom: 0px;
+        margin-left: 1%;
+        flex:1 1 26%;
+    }
+
+    #lienPopulaires{
+        flex-direction: column;
+        height:100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .conteneur1{
+        margin:0px auto;
+        height:100px;
+    }
+    .conteneur1 figcaption{
+        width:100%;
+        max-width: 265px;
+        padding-right: 15px
+    }
+
+    
+    /*3eme Section*/
+    #lienActivites{
+        height: 340px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(20,1fr);
+        row-gap: 0px;
+        column-gap: 30px;
+    }
+
+    .texteActivite{padding:15px 0px;}
+
+    #vieuxPort{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 20;
+    }
+    
+    #fortPomegues{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 11;
+    }
+    
+    #ilesFrioul{
+        grid-column-start: 2;
+        grid-row-start: 13;
+        grid-row-end: 20;
+    }
+    
+    #parcNational{
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: 20;
+    }
+    
+    #notreDame{
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 9;
+    }
+    
+    #parcLongchamp{
+        grid-column-start: 4;
+        grid-row-start: 11;
+        grid-row-end:20;
+    }
+
+    /*Footer*/
+    footer{padding-left: 3%;}
+}
+
+@media screen and (min-width: 1200px){
+    #logo img{width:90px;}
+
+    header p, nav a{font-size: 0.9em;}
+
+    h1, h3{font-size:1.2em}
+    h2{font-size:1.1em}
+
+    p{font-size: 0.9em;}
+
+    h4{font-size: 0.9em}
+
+    figcaption p{font-size:0.8em;}
+
+
+    #titreetlien i{font-size:1.2em}
+
+    .etoile{font-size: 0.6em;}
+
+    #affiPlus{font-size: 0.9em;}
+
+    /*Header*/
+
+    nav li{width: 145px}
+
+
+    /*2eme et 3eme Section*/
+
+    .conteneur1{height:123px;}
+    .conteneur2{height:175px;}
+
+
+    /*4eme Section*/
+
+    #lienActivites{
+        height: 400px;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    #logo img{width:100px;}
+
+    header p, nav a{font-size: 1em;}
+
+    h1, h3{font-size:1.4em}
+    h2{font-size:1.3em}
+
+    p{font-size: 1em;}
+
+    h4{font-size: 1em}
+
+    figcaption p{font-size:0.8em;}
+
+
+    #titreetlien i{font-size:1.4em}
+
+    .etoile{font-size: 0.7em;}
+
+    #affiPlus{font-size: 1.1em;}
+
+    /*Header*/
+
+    nav li{width: 170px}
+
+
+
+    /*1ere Section*/
+
+    #champrecherche, #localisation, #boutonrecherche{height: 50px;}
+
+    #localisation, #boutonrecherche{
+        font-size: 1.4em;
+        width: 50px;
+    }
+
+    #champrecherche input{font-size: 1.2em;}
+
+    #boutonrecherche2{
+        width:140px;
+        font-size: 1.2em;
+    }
+
+    #listefiltres button{
+        font-size: 1.1em;
+        height: 50px;
+        padding-right: 20px;
+    }
+    
+    #listefiltres i {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    .fa-info{
+        font-size: 1em;
+        padding-top: 6px;
+        width: 30px;
+        height: 24px;
+        border-width: 3px;
+    }
+
+    #info p{margin-top: 8px;}
+
+
+
+    /*2eme et 3eme Section*/
+    #populaires, #hebergements{padding: 45px 3% 30px;}
+
+    .conteneur1{height:135px;}
+    .conteneur2{height:190px;}
+
+    #lienHebergements{
+        column-gap: 40px;
+        row-gap: 20px;
+        margin-bottom:20px;
+    }
+
+    /*4eme Section*/
+
+    #lienActivites{
+        height: 445px;
+        column-gap: 40px;
+    }
+
+    .texteActivite{padding:20px 0px;}
+
+
+    /*Footer*/
+    h5{font-size: 1.2em;}
+
+    footer li{
+        font-size:1em;
+        margin-bottom:20px;
+    }
+}
+
+
+@media screen and (min-width: 1800px){
+    #logo img{width:130px;}
+
+    header p, nav a{font-size: 1.3em;}
+
+    h1, h3{font-size:1.9em}
+    h2{font-size:1.8em}
+
+    p{font-size: 1.4em;}
+
+    h4{font-size: 1.3em}
+
+    figcaption p{font-size:1.1em;}
+
+
+    #titreetlien i{font-size:1.6em}
+
+    .etoile{font-size: 1em;}
+
+    #affiPlus{font-size: 1.4em;}
+
+    /*Header*/
+    nav li{width: 200px}
+
+
+    /*1ere Section*/
+
+    #champrecherche, #localisation{height: 65px;}
+
+    #localisation{
+        font-size: 1.6em;
+        width: 65px;
+    }
+
+    #champrecherche input{font-size: 1.4em;}
+
+    #boutonrecherche2{
+        width:160px;
+        font-size: 1.4em;
+    }
+
+    #listefiltres button{
+        font-size: 1.4em;
+        height: 65px;
+        padding-right: 25px;
+        border-radius: 40px;
+        border-width: 4px;
+    }
+    
+    #listefiltres i {
+        width: 65px;
+        height: 65px;
+        margin-right: 20px;
+    }
+
+    .fa-info{
+        font-size: 1.1em;
+        padding-top: 8px;
+        width: 35px;
+        height: 27px;
+    }
+
+    #info p{margin-top: 8px;}
+
+
+    /*2eme et 3eme Section*/
+    .conteneur1{height:160px;}
+    .conteneur2{height:220px;}
+
+    #lienHebergements{
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+
+    /*4eme Section*/
+
+    #lienActivites{
+        height: 600px;
+        column-gap: 60px;
+    }
+
+    .texteActivite{padding:25px 0px;}
+
+
+    /*Footer*/
+
+    h5{font-size: 1.4em;}
+
+    footer li{font-size:1.2em;}
+}
+
+@media screen and (min-width: 2150px){
+    #logo img{width:140px;}
+
+    header p, nav a{font-size: 1.6em;}
+
+    h1, h3{font-size:2.2em}
+    h2{font-size:2.1em;margin-bottom: 30px;}
+
+    p{font-size: 1.7em;}
+
+    h4{font-size: 1.5em}
+
+    figcaption p{font-size:1.3em;}
+
+
+    #titreetlien i{font-size:1.9em}
+
+    .etoile{font-size: 1.2em;}
+
+    #affiPlus{font-size: 1.6em;}
+
+    section{padding-top:90px;}
+
+    /*Header*/
+    nav li{width: 250px}
+
+    /*1ere Section*/
+    h1 + p{
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    #champrecherche{border-width: 3px;}
+
+    #champrecherche, #localisation{height: 75px;}
+
+    #localisation{
+        font-size: 1.8em;
+        width: 75px;
+    }
+
+    #champrecherche input{font-size: 1.8em;}
+
+    #boutonrecherche2{
+        width:220px;
+        font-size: 1.8em;
+    }
+
+    #listefiltres{
+        margin-top: 70px;
+    }
+
+    #listefiltres button{
+        font-size: 1.6em;
+        height: 75px;
+        padding-right: 30px;
+        margin-bottom: 30px;
+    }
+    
+    #listefiltres i {
+        width: 75px;
+        height: 75px;
+        margin-right: 25px;
+    }
+
+    #info{
+        margin-top: 30px; 
+        margin-bottom: 30px; 
+    }
+
+    .fa-info{
+        font-size: 1.2em;
+        padding-top: 9px;
+        width: 40px;
+        height: 31px;
+    }
+
+
+    /*2eme et 3eme Section*/
+    h3{margin-bottom:35px;}
+
+    .conteneur1,.conteneur2,.conteneur3{border-radius:30px; box-shadow:0px 0px 30px #dfdfdf;}
+
+    .conteneur1{height:190px;padding:7px;}
+    .conteneur2{height:270px;padding:7px;}
+
+    .conteneur1 img{border-radius:28px 0px 0px 28px;}
+    .conteneur2 img{border-radius:28px 28px 0px 0px;}
+
+
+    #lienHebergements{
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+
+    /*4eme Section*/
+
+    #lienActivites{
+        height: 750px;
+        column-gap: 60px;
+    }
+
+    .texteActivite{padding:30px 0px;}
+
+
+    /*Footer*/
+
+    h5{font-size: 1.6em;}
+
+    footer li{
+        font-size:1.4em;
+    }
+}
+
+@media screen and (min-width: 2500px){
+    #logo img{width:160px;}
+
+    header p, nav a{font-size: 1.9em;}
+
+    h1, h3{font-size:2.5em}
+    h2{font-size:2.4em}
+
+    p{font-size: 2em;}
+
+    h4{font-size: 1.8em}
+
+    figcaption p{font-size:1.6em;}
+
+
+    #titreetlien i{font-size:2.2em}
+
+    .etoile{font-size: 1.5em;}
+
+    #affiPlus{font-size: 1.9em;}
+
+    section{padding-top:110px;}
+
+    /*Header*/
+    nav li{width: 290px}
+
+
+    /*1ere Section*/
+
+    #champrecherche, #localisation{height: 85px;}
+
+    #localisation{
+        font-size: 2.1em;
+        width: 85px;
+    }
+
+    #champrecherche input{font-size: 2.1em;}
+
+    #boutonrecherche2{
+        width:240px;
+        font-size: 2.1em;
+    }
+
+    #listefiltres button{
+        font-size: 1.9em;
+        height: 85px;
+        padding-right: 40px;
+    }
+    
+    #listefiltres i {
+        width: 85px;
+        height: 85px;
+        margin-right: 30px;
+    }
+
+    .fa-info{
+        font-size: 1.5em;
+        padding-top: 10px;
+        width: 45px;
+        height: 35px;
+    }
+
+
+    /*2eme et 3eme Section*/
+    h3{margin-bottom:45px;}
+
+    .conteneur1{height:210px;}
+    .conteneur2{height:320px;}
+
+    #lienHebergements{
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+
+    /*4eme Section*/
+
+    #lienActivites{
+        height: 900px;
+        column-gap: 100px;
+    }
+
+    .texteActivite{padding:35px 0px;}
+
+
+    /*Footer*/
+
+    h5{font-size: 1.9em;}
+
+    footer li{font-size:1.7em;}
+}
