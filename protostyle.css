@@ -39,8 +39,6 @@ button:focus{outline:none;}
 
 h1, h2, h3, h4, h5{font-family: 'Raleway bold',Arial, Helvetica, sans-serif ;}
 
-#boutonrecherche2{display:none;}
-
 h1, h3, h2{font-size:1.2em}
 
 p{font-size: 0.8em;}
@@ -110,6 +108,7 @@ nav a[href="#activites"]:active{
 
 /*Section Recherche/filtres*/
 
+
 h1 + p{
     margin-top: 15px;
     margin-bottom: 35px;
@@ -133,6 +132,7 @@ h1 + p{
     border: none;
     padding-left:20px;
     font-size: 0.9em;
+    font-family: "Raleway bold",Arial, Helvetica, sans-serif ;
     font-weight: bold;
 }
 
@@ -157,6 +157,11 @@ h1 + p{
     border-radius: 13px;
 }
 
+#boutonrecherche2{
+    display:none;
+    font-family: "Raleway bold",Arial, Helvetica, sans-serif;
+}
+
 
         /*Filtres*/
 
@@ -176,8 +181,8 @@ h2{
 #listefiltres button{
     display: flex;
     align-items: center;
+    font-family: "Raleway bold",Arial, Helvetica, sans-serif;
     font-size: 0.8em;
-    font-weight: bold;
     height: 45px;
     border-radius: 30px;
     background-color: white;
@@ -316,10 +321,10 @@ figcaption p{margin-top:6px;}
 #affiPlus{
     align-self: flex-start;
     margin-top: auto;
-    font-family: "Raleway bold";
     margin-top: 20px;
     font-size: 0.9em;
 }
+#affiPlus a{font-family: "Raleway bold",Arial, Helvetica, sans-serif;}
 
 
         /*Conteneur 2*/
@@ -658,9 +663,9 @@ footer li{
 
 
         /*2eme Section*/ 
-    .conteneur1{height:130px}
+    .conteneur1{height:120px}
     #populaires{margin-bottom: 40px;}
-    .conteneur1 figcaption{padding-right:20px}
+    .conteneur1 figcaption{padding-right:10px}
 
 
     #lienPopulaires{
